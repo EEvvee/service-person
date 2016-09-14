@@ -58,7 +58,7 @@ angular.module('starter', ['ionic'])
 
       .state('login',{
         url:'/login',
-        abstract:true,
+        controller: 'loginController',
         templateUrl:'views/login/login.html'
       })
 
@@ -71,6 +71,13 @@ angular.module('starter', ['ionic'])
           }
         }
       })
+
+      .state('my',{
+        url:'/my',
+        controller: 'myController',
+        templateUrl:'views/my/my.html'
+    });
+
     $urlRouterProvider.otherwise('/tabs/dashboard');
 
   })
